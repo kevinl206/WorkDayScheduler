@@ -4,27 +4,6 @@
 // $(function () {
 
 
-  // TODO: Add a listener for click events on the save button. This code should
-  // use the id in the containing time-block as a key to save the user input in
-  // local storage. HINT: What does `this` reference in the click listener
-  // function? How can DOM traversal be used to get the "hour-x" id of the
-  // time-block containing the button that was clicked? How might the id be
-  // useful when saving the description in local storage?
-  //
-  // TODO: Add code to apply the past, present, or future class to each time
-  // block by comparing the id to the current hour. HINTS: How can the id
-  // attribute of each time-block be used to conditionally add or remove the
-  // past, present, and future classes? How can Day.js be used to get the
-  // current hour in 24-hour time?
-  //
-  // TODO: Add code to get any user input that was saved in localStorage and set
-  // the values of the corresponding textarea elements. HINT: How can the id
-  // attribute of each time-block be used to do this?
-  //
-  // TODO: Add code to display the current date in the header of the page.
-  
-// });
-
 // $("#currentDay").text(currentDay.format("MMMM Do YYYY")) 
 // var currentDay = moment();
 // var timeNow = moment().format('HH');
@@ -67,86 +46,86 @@ var submit3Pm = document.getElementById("submit3PM");
 var submit4Pm = document.getElementById("submit4PM");
 var submit5Pm = document.getElementById("submit5PM");
 
-
+// save and retrieve function
 function save9am() {
     var value9Am = input9Am.value;
-    localStorage.setItem('9am', JSON.stringify(value9Am))
+    localStorage.setItem("9am", JSON.stringify(value9Am))
 };
 
 function retrieve9am() {
-    input9Am.value = JSON.parse(localStorage.getItem('9am'))
+    input9Am.value = JSON.parse(localStorage.getItem("9am"))
 };
 
 function save10am() {
     var value10Am = input10Am.value;
-    localStorage.setItem('10am', JSON.stringify(value10Am))
+    localStorage.setItem("10am", JSON.stringify(value10Am))
 };
 
 function retrieve10am() {
-    input10Am.value = JSON.parse(localStorage.getItem('10am'))
+    input10Am.value = JSON.parse(localStorage.getItem("10am"))
 };
 
 function save11am() {
     var value11Am = input11Am.value;
-    localStorage.setItem('11am', JSON.stringify(value11Am))
+    localStorage.setItem("11am", JSON.stringify(value11Am))
 };
 
 function retrieve11am() {
-    input11Am.value = JSON.parse(localStorage.getItem('11am'))
+    input11Am.value = JSON.parse(localStorage.getItem("11am"))
 };
 
 function save12pm() {
     var value12Pm = input12Pm.value;
-    localStorage.setItem('12Pm', JSON.stringify(value12Pm))
+    localStorage.setItem("12Pm", JSON.stringify(value12Pm))
 };
 
 function retrieve12pm() {
-    input12Pm.value = JSON.parse(localStorage.getItem('12Pm'))
+    input12Pm.value = JSON.parse(localStorage.getItem("12Pm"))
 };
 
 function save1pm() {
     var value1Pm = input1Pm.value;
-    localStorage.setItem('1Pm', JSON.stringify(value1Pm))
+    localStorage.setItem("1Pm", JSON.stringify(value1Pm))
 };
 
 function retrieve1pm() {
-    input1Pm.value = JSON.parse(localStorage.getItem('1Pm'))
+    input1Pm.value = JSON.parse(localStorage.getItem("1Pm"))
 };
 
 function save2pm() {
     var value2Pm = input2Pm.value;
-    localStorage.setItem('2Pm', JSON.stringify(value2Pm))
+    localStorage.setItem("2Pm", JSON.stringify(value2Pm))
 };
 
 function retrieve2pm() {
-    input2Pm.value = JSON.parse(localStorage.getItem('2Pm'))
+    input2Pm.value = JSON.parse(localStorage.getItem("2Pm"))
 };
 
 function save3pm() {
     var value3Pm = input3Pm.value;
-    localStorage.setItem('3Pm', JSON.stringify(value3Pm))
+    localStorage.setItem("3Pm", JSON.stringify(value3Pm))
 };
 
 function retrieve3pm() {
-    input3Pm.value = JSON.parse(localStorage.getItem('3Pm'))
+    input3Pm.value = JSON.parse(localStorage.getItem("3Pm"))
 };
 
 function save4pm() {
     var value4Pm = input4Pm.value;
-    localStorage.setItem('4Pm', JSON.stringify(value4Pm))
+    localStorage.setItem("4Pm", JSON.stringify(value4Pm))
 };
 
 function retrieve4pm() {
-    input4Pm.value = JSON.parse(localStorage.getItem('4Pm'))
+    input4Pm.value = JSON.parse(localStorage.getItem("4Pm"))
 };
 
 function save5pm() {
     var value5Pm = input5Pm.value;
-    localStorage.setItem('5Pm', JSON.stringify(value5Pm))
+    localStorage.setItem("5Pm", JSON.stringify(value5Pm))
 };
 
 function retrieve5pm() {
-    input5Pm.value = JSON.parse(localStorage.getItem('5Pm'))
+    input5Pm.value = JSON.parse(localStorage.getItem("5Pm"))
 };
 
 //Savebtn event listeners for the buttons that are click to their hours.
@@ -185,7 +164,6 @@ var time = {
 }
 
 
-//If, else if statement to change the block of time based on the timeNOW variable.
 $.each(textArea, function(){
     var textAreaId = $(this).attr("id");
     if(time[textAreaId] < timeNow) {
@@ -196,3 +174,4 @@ $.each(textArea, function(){
         $(this).addClass("future");
     }
 });
+
