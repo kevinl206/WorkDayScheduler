@@ -16,6 +16,7 @@ textarea {
   background-color: tan;
   border-radius: 1rem;
   margin-bottom: 2rem;
+  border-bottom: 10px solid black;
 }
 
 .description {
@@ -24,6 +25,7 @@ textarea {
 
 .time-block {
   border-radius: 15px;
+  text-align: center;
 }
 
 .row {
@@ -36,6 +38,7 @@ textarea {
   background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  padding-top: 10px;
 }
 
 .past {
